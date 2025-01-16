@@ -36,7 +36,7 @@ supabase: Client = create_client(
 )
 
 # OpenAI setup
-openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url="https://openrouter.ai/api/v1")
 
 # Request/Response Models
 class AgentRequest(BaseModel):
