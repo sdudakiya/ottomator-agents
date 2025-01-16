@@ -28,7 +28,7 @@ from pydantic_ai_expert import pydantic_ai_expert, PydanticAIDeps
 from dotenv import load_dotenv
 load_dotenv()
 
-openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url="https://openrouter.ai/api/v1")
+openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"), OPENAI_API_BASE="https://openrouter.ai/api/v1")
 supabase: Client = Client(
     os.getenv("SUPABASE_URL"),
     os.getenv("SUPABASE_SERVICE_KEY")
